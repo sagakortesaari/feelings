@@ -1,0 +1,54 @@
+body {
+  background-color: #E2E3FF;
+  overflow: hidden;
+}
+
+#test {
+  margin-right: 0;
+}
+
+#text-svg {
+  padding-bottom: 2%;
+  padding-top: 5%;
+}
+
+#cloud-1 {
+  fill: #FFFFFF;
+  width: 15%; /* remove width/height from SVG in order to use this property */
+  position: relative;
+  left: 11.5%;
+  top: 100px;
+  margin: 0;
+}
+
+#cloud-2 {
+  fill: #FFFFFF;
+  width: 8%;
+  position: absolute;
+  left: 40%;
+  margin-right: 0px;
+  top: 30%;
+}
+
+#hello {
+  /* UI Properties */
+  font-family: IBM Plex Mono;
+  font-size: 50px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+
+}
+
+#input {
+  width: 100%;
+}
+
+#inputbox {
+  text-align: center;
+  width: 48%;
+  margin-left: 25%;
+  border: 0px;
+  border-radius: 20px;
+  padding: 1%;
+}
