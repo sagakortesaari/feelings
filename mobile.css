@@ -13,7 +13,6 @@ body {
 }
 
 #text-input {
-  padding-bottom: 2%;
   padding-top: 5%;
 }
 
@@ -24,15 +23,19 @@ body {
   left: 11.5%;
   margin: 0;
   top: 90px;
+  display: none;
+
 }
 
 #cloud-2 {
   fill: #FFFFFF;
-  width: 8%;
-  position: absolute;
-  left: 40%;
-  top: 50px;
+  width: 27%;
+  left: 50%;
+  top: 25px;
   margin-right: 0px;
+  margin-bottom: 5%;
+  margin-left: 36.5%;
+  margin-top: 0%;
 }
 
 @font-face {
@@ -49,28 +52,30 @@ body {
   /* UI Properties */
   font-family: 'Young Serif';
   color: #FF4922;
-  font-size: 70px;
+  font-size: 50px;
+  margin-bottom: 3%;
   text-align: center;
   position: relative;
   z-index: 1;
+  margin-bottom: 0px;
+  margin-top: 0px;
 
 }
 
-#text {
-}
 
 #feelings {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  font-size: 12px;
 }
 
 .circle {
-  margin: 10px;
+  margin: 5px;
   font-family: IBM Plex Mono;
   background-color: #FF8A71;
-  width: 120px;
-  height: 120px;
+  width: 60px;
+  height: 60px;
   padding: 20px;
   overflow: hidden;
   display: flex;
@@ -84,19 +89,19 @@ body {
   transform: translateY(-20px);
 }
 
-
-
 /* Input form */
 
 #input {
   width: 100%;
+  margin-top: 6%;
+  margin-bottom: 6%;
 }
 
 #inputbox {
   text-align: center;
-  width: 48%;
-  margin-left: 25%;
+  width: 79%;
+  margin-left: 7.5%;
   border: 0px;
   border-radius: 20px;
-  padding: 1%;
+  padding: 3%;
 }
