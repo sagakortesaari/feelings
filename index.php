@@ -45,10 +45,13 @@
     $result = $conn->query($sql);
 
     $delay = 0;
+    $colors = array("#A9B5D9", "#F2A477", "#F29472", "#F2C4C4");
 
     while($row = $result->fetch_assoc()) {
       //$delay += 0.08;
-      echo("<div class='circle' style='transition-delay:".strval($delay) . "s'>" . $row['feeling'] . "</div>");
+      $color = rand(0,3);
+
+      echo("<div class='circle' style='background-color:". $colors[$color] . "'>" . $row['feeling'] . "</div>");
     }
     ?>
 

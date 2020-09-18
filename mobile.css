@@ -1,5 +1,5 @@
 body {
-  background-color: #FFDED7;
+  background-color: #EDEEFF;
 }
 
 .test {
@@ -33,7 +33,7 @@ body {
   left: 50%;
   top: 25px;
   margin-right: 0px;
-  margin-bottom: 5%;
+  margin-bottom: 3%;
   margin-left: 36.5%;
   margin-top: 0%;
 }
@@ -48,18 +48,22 @@ body {
    src: url(YoungSerif-Regular.otf);
 }
 
+@font-face {
+  font-family: 'Recoleta';
+  src: url(Recoleta.otf);
+}
+
+
 #hello {
   /* UI Properties */
-  font-family: 'Young Serif';
-  color: #FF4922;
+  font-family: 'Recoleta';
+  color: #000000;
   font-size: 50px;
-  margin-bottom: 3%;
   text-align: center;
   position: relative;
   z-index: 1;
   margin-bottom: 0px;
   margin-top: 0px;
-
 }
 
 

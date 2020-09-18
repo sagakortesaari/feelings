@@ -1,5 +1,5 @@
 body {
-  background-color: #FFDED7;
+  background-color: #EDEEFF;
 }
 
 .test {
@@ -44,19 +44,35 @@ body {
    src: url(YoungSerif-Regular.otf);
 }
 
+@font-face {
+  font-family: 'DM-Serif-Italic';
+  src: url(DMSerifDisplay-Italic.ttf);
+}
+
+@font-face {
+  font-family: 'DM-Serif';
+  src: url(DMSerifDisplay-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Recoleta';
+  src: url(Recoleta.otf);
+}
+
+
 #hello {
   /* UI Properties */
-  font-family: 'Young Serif';
-  color: #FF4922;
+  font-family: 'Recoleta';
+  color: #000000;
   font-size: 70px;
   text-align: center;
   position: relative;
   z-index: 1;
   margin-bottom: 0px;
-
 }
 
-#text {
+#hello .svg {
+
 }
 
 #feelings {
@@ -68,7 +84,7 @@ body {
 .circle {
   margin: 10px;
   font-family: IBM Plex Mono;
-  background-color: #FF8A71;
+  /*background-color: #FF8A71; */
   width: 120px;
   height: 120px;
   padding: 20px;
