@@ -4,7 +4,7 @@ include 'important.php';
 // Create connection
 $conn = new mysqli($servername, $username, $password, $databasename);
 
-$feeling = $_REQUEST['feeling'];
+$feeling = htmlentities($_REQUEST['feeling']);
 
 if(!empty($feeling)) {
   $sql = "INSERT INTO feelings (feeling, datum) VALUES ("."'".$feeling."'".", NOW())";
