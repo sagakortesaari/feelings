@@ -21,7 +21,7 @@
       </svg>
     </div>
 
-    <p id="hello"> how are you feeling today? </p>
+    <p id="hello"> how are you feeling today<span id="questionmark">?</span> </p>
 
     <form id="input" action="/feeling_query.php">
       <input type="text" placeholder="type here + press enter" id="inputbox" name="feeling">

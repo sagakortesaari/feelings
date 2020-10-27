@@ -6,15 +6,6 @@ body {
     padding-top: 5%;
 }
 
-#cloud-1 {
-    fill: #ffffff;
-    width: 12%; /* remove width/height from SVG in order to use this property */
-    position: absolute;
-    left: 11.5%;
-    margin: 0;
-    top: 90px;
-}
-
 #cloud-2 {
     fill: #ffffff;
     width: 12%;
@@ -49,9 +40,14 @@ body {
     src: url(Recoleta.otf);
 }
 
+@font-face {
+    font-family: "GT-Super-Display-Light-Trial";
+    src: url(GT-Super-Display-Light-Trial.otf);
+}
+
 #hello {
     /* UI Properties */
-    font-family: "Recoleta";
+    font-family: "GT-Super-Display-Light-Trial";
     color: #000000;
     font-size: 70px;
     text-align: center;
@@ -59,6 +55,10 @@ body {
     z-index: 1;
     margin-top: 110px;
     margin-bottom: 20px;
+}
+
+#questionmark {
+    font-family: "DM-Serif";
 }
 
 #feelings {

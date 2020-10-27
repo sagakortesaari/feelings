@@ -6,25 +6,12 @@ body {
     padding-top: 5%;
 }
 
-#cloud-1 {
-    fill: #ffffff;
-    width: 12%; /* remove width/height from SVG in order to use this property */
-    position: absolute;
-    left: 11.5%;
-    margin: 0;
-    top: 90px;
-    display: none;
-}
-
 #cloud-2 {
     fill: #ffffff;
-    width: 27%;
-    left: 50%;
+    position: absolute;
+    width: 25%;
+    left: 37.5%;
     top: 25px;
-    margin-right: 0px;
-    margin-bottom: 3%;
-    margin-left: 36.5%;
-    margin-top: 0%;
 }
 
 @font-face {
@@ -42,16 +29,25 @@ body {
     src: url(Recoleta.otf);
 }
 
+@font-face {
+    font-family: "GT-Super-Display-Light-Trial";
+    src: url(GT-Super-Display-Light-Trial.otf);
+}
+
 #hello {
     /* UI Properties */
-    font-family: "Recoleta";
+    font-family: "GT-Super-Display-Light-Trial";
     color: #000000;
-    font-size: 3em;
+    font-size: 60px;
     text-align: center;
     position: relative;
     z-index: 1;
-    margin-bottom: 0px;
-    margin-top: 0px;
+    margin-top: 110px;
+    margin-bottom: 20px;
+}
+
+#questionmark {
+    font-family: "DM-Serif";
 }
 
 #feelings {
@@ -62,11 +58,11 @@ body {
 }
 
 .circle {
-    margin: 5px;
+    margin: 10px;
     font-family: IBM Plex Mono;
-    background-color: #ff8a71;
-    width: 60px;
-    height: 60px;
+    /*background-color: #FF8A71; */
+    width: 75px;
+    height: 75px;
     padding: 20px;
     overflow: hidden;
     display: flex;
