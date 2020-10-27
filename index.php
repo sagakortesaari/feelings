@@ -2,8 +2,8 @@
 <html>
 <head>
   <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
-  <link rel="stylesheet" media="(min-width: 700px)" href="fullscreen.css">
-  <link rel="stylesheet" media="(max-width:800px)" href="mobile.css">
+  <link rel="stylesheet" media="(min-width: 1000px)" href="fullscreen.css">
+  <link rel="stylesheet" media="(max-width:1000px)" href="mobile.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
   <script src="jquery-3.4.1.min.js"></script>
@@ -14,11 +14,6 @@
 <body>
 
   <div id="text-input">
-    <div id="cloud-1">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 327 190">
-        <path id="Union_1" data-name="Union 1" d="M50.623,190v-.327A56.515,56.515,0,0,1,0,133.655c0-31.118,25.422-56.344,56.78-56.344A57.378,57.378,0,0,1,69.9,78.822C72.335,34.905,111.166,0,158.711,0c48.666,0,88.2,36.571,88.923,81.944a56.979,56.979,0,0,1,22.585-4.633c31.36,0,56.781,25.225,56.781,56.344,0,30.892-25.052,55.978-56.1,56.341v0Z"/>
-      </svg>
-    </div>
 
     <div id="cloud-2">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 327 190">
@@ -45,11 +40,11 @@
     $result = $conn->query($sql);
 
     $delay = 0;
-    $colors = array("#A9B5D9", "#F2A477", "#F29472", "#F2C4C4");
+    $colors = array("#A9B5D9", "#F2A477", "#F29472", "#F2C4C4", "#EA6732", "#283483");
 
     while($row = $result->fetch_assoc()) {
       //$delay += 0.08;
-      $color = rand(0,3);
+      $color = rand(0,5);
 
       echo("<div class='circle' style='background-color:". $colors[$color] . "'>" . $row['feeling'] . "</div>");
     }
