@@ -15,7 +15,7 @@ $(function () {
             "#F29472",
             "#F2C4C4",
             "#EA6732",
-            "#283483",
+            "#5062D8",
         ];
         var randomize = Math.floor(Math.random() * 6);
         var circlecolor = colors[randomize];

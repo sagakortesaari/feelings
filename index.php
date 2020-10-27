@@ -40,7 +40,7 @@
     $result = $conn->query($sql);
 
     $delay = 0;
-    $colors = array("#A9B5D9", "#F2A477", "#F29472", "#F2C4C4", "#EA6732", "#283483");
+    $colors = array("#A9B5D9", "#F2A477", "#F29472", "#F2C4C4", "#EA6732", "#5062D8");
 
     while($row = $result->fetch_assoc()) {
       //$delay += 0.08;
