@@ -9,8 +9,8 @@ body {
 #cloud-2 {
     fill: #ffffff;
     position: absolute;
-    width: 25%;
-    left: 37.5%;
+    width: 20%;
+    left: 40%;
     top: 25px;
 }
 
@@ -42,8 +42,8 @@ body {
     text-align: center;
     position: relative;
     z-index: 1;
-    margin-top: 110px;
-    margin-bottom: 20px;
+    margin-top: 80px;
+    margin-bottom: 30px;
 }
 
 #questionmark {
@@ -58,11 +58,11 @@ body {
 }
 
 .circle {
-    margin: 10px;
+    margin: 5px;
     font-family: IBM Plex Mono;
     /*background-color: #FF8A71; */
-    width: 75px;
-    height: 75px;
+    width: 60px;
+    height: 60px;
     padding: 20px;
     overflow: hidden;
     display: flex;
@@ -91,4 +91,5 @@ body {
     border: 0px;
     border-radius: 20px;
     padding: 3%;
+    font-family: IBM Plex Mono;
 }
