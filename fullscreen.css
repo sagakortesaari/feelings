@@ -9,9 +9,8 @@ body {
 #cloud-2 {
     fill: #ffffff;
     width: 12%;
-    position: absolute;
+    position: relative;
     left: 44%;
-    top: 50px;
     margin-right: 0px;
 }
 
@@ -53,7 +52,7 @@ body {
     text-align: center;
     position: relative;
     z-index: 1;
-    margin-top: 110px;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 

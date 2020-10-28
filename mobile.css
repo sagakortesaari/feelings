@@ -8,10 +8,9 @@ body {
 
 #cloud-2 {
     fill: #ffffff;
-    position: absolute;
+    position: relative;
     width: 20%;
     left: 40%;
-    top: 25px;
 }
 
 @font-face {
@@ -42,7 +41,7 @@ body {
     text-align: center;
     position: relative;
     z-index: 1;
-    margin-top: 80px;
+    margin-top: 30px;
     margin-bottom: 30px;
 }
 
