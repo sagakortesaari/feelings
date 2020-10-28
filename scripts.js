@@ -24,13 +24,7 @@ $(function () {
         feeling.classList.add("circle");
         feeling.style.backgroundColor = circlecolor;
         feelings.prepend(feeling);
-        console.log("done");
         $("#inputbox").val("");
         return false;
     });
 });
-
-/*$(document).ready(function() {
-  $(".circle").css('transform', 'translateY(20px)');
-  $(".circle").css('transition-timing-function', 'ease');
-});*/
