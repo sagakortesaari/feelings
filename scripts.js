@@ -9,15 +9,8 @@ $(function () {
         });
 
         var feelings = document.getElementById("feelings");
-        var colors = [
-            "#A9B5D9",
-            "#F2A477",
-            "#F29472",
-            "#F2C4C4",
-            "#EA6732",
-            "#5062D8",
-        ];
-        var randomize = Math.floor(Math.random() * 6);
+        var colors = ["#A9B5D9", "#F2A477", "#F29472", "#F2C4C4"];
+        var randomize = Math.floor(Math.random() * 4);
         var circlecolor = colors[randomize];
         var feeling = document.createElement("div");
         feeling.innerHTML = $("#inputbox").val();
