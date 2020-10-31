@@ -2,8 +2,8 @@
 <html>
 <head>
   <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
-  <link rel="stylesheet" media="(min-width: 850px)" href="fullscreen.css">
-  <link rel="stylesheet" media="(max-width: 850px)" href="mobile.css">
+  <link rel="stylesheet" media="(min-width: 850px)" href="/styles/fullscreen.css">
+  <link rel="stylesheet" media="(max-width: 850px)" href="/styles/mobile.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
   <script src="jquery-3.4.1.min.js"></script>
@@ -55,6 +55,6 @@
 
 </body>
 
-<script src="/scripts.js"></script>
+<script src="/scripts/scripts.js"></script>
 
 </html>
