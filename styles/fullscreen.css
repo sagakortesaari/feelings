@@ -1,0 +1,104 @@
+body {
+    background-color: #edeeff;
+}
+
+#text-input {
+    padding-top: 5%;
+}
+
+#cloud-2 {
+    fill: #ffffff;
+    width: 12%;
+    position: relative;
+    left: 44%;
+    margin-right: 0px;
+}
+
+@font-face {
+    font-family: "Bagnard";
+    src: url(/fonts/Bagnard.otf);
+}
+
+@font-face {
+    font-family: "Young Serif";
+    src: url(/fonts/YoungSerif-Regular.otf);
+}
+
+@font-face {
+    font-family: "DM-Serif-Italic";
+    src: url(/fonts/DMSerifDisplay-Italic.ttf);
+}
+
+@font-face {
+    font-family: "DM-Serif";
+    src: url(/fonts/DMSerifDisplay-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Recoleta";
+    src: url(/fonts/Recoleta.otf);
+}
+
+@font-face {
+    font-family: "GT-Super-Display-Light-Trial";
+    src: url(/fonts/GT-Super-Display-Light-Trial.otf);
+}
+
+#hello {
+    /* UI Properties */
+    font-family: "GT-Super-Display-Light-Trial";
+    color: #000000;
+    font-size: 70px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#questionmark {
+    font-family: "DM-Serif";
+}
+
+#feelings {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.circle {
+    margin: 10px;
+    font-family: IBM Plex Mono;
+    /*background-color: #FF8A71; */
+    width: 120px;
+    height: 120px;
+    padding: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.circle:hover {
+    transform: translateY(-20px);
+}
+
+/* Input form */
+
+#input {
+    width: 100%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+#inputbox {
+    text-align: center;
+    width: 48%;
+    margin-left: 25%;
+    border: 0px;
+    border-radius: 20px;
+    padding: 1.5%;
+    font-family: IBM Plex Mono;
+}
