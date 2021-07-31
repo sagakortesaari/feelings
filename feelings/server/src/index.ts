@@ -1,11 +1,10 @@
 import { MikroORM } from "mikro-orm";
 //import express from "express";
-import config from "../mikro-orm-config";
+import config from "./mikro-orm-config";
 import { Feelings } from "./entities/Feelings";
 
 async function main() {
     console.log("hiii :)");
-
     const orm = await MikroORM.init(config);
 
     //const app = express();
