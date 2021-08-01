@@ -2,12 +2,18 @@ import { MikroORM, RequestContext } from "mikro-orm";
 import express from "express";
 import config from "./mikro-orm.config";
 import { Feelings } from "./entities/Feelings";
+import cors from "cors";
 
 async function main() {
     const orm = await MikroORM.init(config);
 
     const app = express();
     app.use(express.json());
+    app.use(
+        cors({
+            origin: ["http://localhost:3000"],
+        })
+    );
 
     app.use((req, res, next) => {
         if (req.headers.authorization == process.env.API_PASS) {
@@ -31,8 +37,8 @@ async function main() {
         res.send(await orm.em.find(Feelings, {}));
     });
 
-    app.listen(3000, () => {
-        console.log(`Example app listening at http://localhost:3000`);
+    app.listen(8080, () => {
+        console.log(`Example app listening at http://localhost:8080`);
     });
 }
 
