@@ -1,4 +1,4 @@
-import { MikroORM, RequestContext } from "mikro-orm";
+import { MikroORM } from "mikro-orm";
 import express from "express";
 import config from "./mikro-orm.config";
 import { Feelings } from "./entities/Feelings";
@@ -14,14 +14,6 @@ async function main() {
             origin: ["http://localhost:3000"],
         })
     );
-
-    app.use((req, res, next) => {
-        if (req.headers.authorization == process.env.API_PASS) {
-            RequestContext.create(orm.em, next);
-        } else {
-            res.send("invalid");
-        }
-    });
 
     app.post("/feeling", async (req, res) => {
         orm.em.persistAndFlush(
