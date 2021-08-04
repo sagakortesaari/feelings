@@ -102,26 +102,14 @@ function App() {
 
     useEffect(() => {
         setEmoji(emojis[generateNum(0, emojis.length - 1)]);
-        axios
-            .get("http://localhost:8080/getFeelings", {
-                headers: {
-                    Authorization: "",
-                },
-            })
-            .then((response) => {
-                setFeelings(response.data.reverse());
-            });
+        axios.get("http://localhost:8080/getFeelings").then((response) => {
+            setFeelings(response.data.reverse());
+        });
     }, []);
 
     async function addFeeling(event: React.FormEvent) {
         event.preventDefault();
-        axios.post(
-            "http://localhost:8080/feeling",
-            { feeling: formText },
-            {
-                headers: { Authorization: "" },
-            }
-        );
+        axios.post("http://localhost:8080/feeling", { feeling: formText });
         //mutate({feeling: formText})
         //data && setFeelings(data);
         const feeling: Feeling = {
