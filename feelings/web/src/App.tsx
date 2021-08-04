@@ -12,6 +12,8 @@ const InputField = styled.input`
     background-color: white;
     margin-bottom: 20px;
     outline: none;
+    font-family: mr-eaves-modern, sans-serif;
+    font-size: 20px;
 `;
 
 const HeaderText = styled.h1`
@@ -28,7 +30,7 @@ const HeaderText = styled.h1`
 
 const Input = styled.div`
     margin: auto;
-    width: 50%;
+    max-width: 600px;
     margin-top: 40px;
     margin-bottom: 40px;
 `;
@@ -41,6 +43,7 @@ const Feelings = styled.div`
     font-weight: 400;
     font-style: normal;
     font-size: 20px;
+    max-width: 1400px;
 `;
 
 const Circle = styled.div`
@@ -74,6 +77,13 @@ const CircleText = styled.div`
     text-align: center;
 `;
 
+const FeelingContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    margin-right: 10%;
+    margin-left: 10%;
+`;
+
 type Feeling = {
     id: number;
     feeling: string;
@@ -95,7 +105,7 @@ function App() {
         axios
             .get("http://localhost:8080/getFeelings", {
                 headers: {
-                    Authorization: "auth key here",
+                    Authorization: "",
                 },
             })
             .then((response) => {
@@ -109,7 +119,7 @@ function App() {
             "http://localhost:8080/feeling",
             { feeling: formText },
             {
-                headers: { Authorization: "auth key here" },
+                headers: { Authorization: "" },
             }
         );
         //mutate({feeling: formText})
@@ -141,16 +151,21 @@ function App() {
                 </form>
             </Input>
 
-            <Feelings>
-                {feelings.map((feeling: Feeling) => {
-                    return (
-                        <Circle key={feeling.id}>
-                            {" "}
-                            <CircleText> {feeling.feeling} </CircleText>{" "}
-                        </Circle>
-                    );
-                })}
-            </Feelings>
+            <FeelingContainer>
+                <Feelings>
+                    {feelings.map((feeling: Feeling) => {
+                        return (
+                            <Circle key={feeling.id}>
+                                {" "}
+                                <CircleText>
+                                    {" "}
+                                    {feeling.feeling}{" "}
+                                </CircleText>{" "}
+                            </Circle>
+                        );
+                    })}
+                </Feelings>
+            </FeelingContainer>
         </>
     );
 }
