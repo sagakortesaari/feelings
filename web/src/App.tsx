@@ -98,9 +98,9 @@ function App() {
     const [formText, setFormText] = useState("");
     const [feelings, setFeelings] = useState<Feeling[]>([]);
     const [emoji, setEmoji] = useState("");
-    const emojis = ["❤️", "❤️‍🔥", "💔", "❤️‍🩹", "🔥", "🌈", "💌"];
 
     useEffect(() => {
+        const emojis = ["❤️", "❤️‍🔥", "💔", "❤️‍🩹", "🔥", "🌈", "💌"];
         setEmoji(emojis[generateNum(0, emojis.length - 1)]);
         axios.get("https://hayf-api.sagak.se/getFeelings").then((response) => {
             setFeelings(response.data.reverse());
