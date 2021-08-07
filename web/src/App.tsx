@@ -42,21 +42,35 @@ const Feelings = styled.div`
     font-family: mr-eaves-modern, sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 20px;
     max-width: 1400px;
+
+    @media (min-width: 1000px) {
+        font-size: 20px;
+    }
+
+    @media (max-width: 1000px) {
+        font-size: 16px;
+    }
 `;
 
 const Circle = styled.div`
+    overflow: hidden;
     background-color: pink;
-    margin-right: 20px;
-    margin-bottom: 20px;
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
     padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
+
+    @media (min-width: 1000px) {
+        width: 120px;
+        height: 120px;
+    }
+
+    @media (max-width: 1000px) {
+        width: 80px;
+        height: 80px;
+    }
 `;
 
 const GlobalStyle = createGlobalStyle`
@@ -77,11 +91,19 @@ const CircleText = styled.div`
     text-align: center;
 `;
 
+const CircleWrapper = styled.div`
+    text-align: center;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+`;
+
 const FeelingContainer = styled.div`
     display: flex;
     justify-content: center;
-    margin-right: 10%;
-    margin-left: 10%;
+    margin-right: 5%;
+    margin-left: 5%;
 `;
 
 type Feeling = {
@@ -141,6 +163,7 @@ function App() {
                 <Feelings>
                     {feelings.map((feeling: Feeling) => {
                         return (
+                            <CircleWrapper>
                             <Circle key={feeling.id}>
                                 {" "}
                                 <CircleText>
@@ -148,6 +171,7 @@ function App() {
                                     {feeling.feeling}{" "}
                                 </CircleText>{" "}
                             </Circle>
+                            </CircleWrapper>
                         );
                     })}
                 </Feelings>
