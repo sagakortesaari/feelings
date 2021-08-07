@@ -10,16 +10,21 @@ jobs:
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v2
-      
-    - run: cd web
 
     - name: install npm deps
       uses: actions/setup-node@v2
       with:
         node-version: 15.x
         cache: 'npm'
-    - run: npm install
-    - run: npm run build
+        
+    - name: install npm deps
+      working-directory: ./web
+      run: npm install
+    
+    - name: compile react app
+      working-directory: ./web
+      run: npm run build
+      
     
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.1.0
@@ -28,6 +33,6 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         protocol: ftps
-        local-dir: ./build/
+        local-dir: ./web/build/
         server-dir: public_html/howareyoufeeling/
         dangerous-clean-slate: true
