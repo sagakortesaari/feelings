@@ -14,6 +14,7 @@ async function main() {
             origin: [
                 "http://localhost:3000",
                 "https://www.howareyoufeeling.sagak.se",
+                "https://howareyoufeeling.sagak.se",
             ],
         })
     );
