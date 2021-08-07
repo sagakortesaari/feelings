@@ -10,6 +10,7 @@
     "dev": "source .env && nodemon dist/src/server.js",
     "watch": "tsc -w",
     "start": "source .env && node dist/server.js",
+    "docker": "node dist/server.js",
     "start1": "ts-node src/server.ts"
   },
   "dependencies": {
