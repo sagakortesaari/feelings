@@ -13,7 +13,7 @@ async function main() {
         cors({
             origin: [
                 "http://localhost:3000",
-                "https://howareyoufeeling.sagak.se",
+                "https://www.howareyoufeeling.sagak.se",
             ],
         })
     );
