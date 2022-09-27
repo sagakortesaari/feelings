@@ -124,14 +124,14 @@ function App() {
     useEffect(() => {
         const emojis = ["❤️", "❤️‍🔥", "💔", "❤️‍🩹", "🔥", "🌈", "💌"];
         setEmoji(emojis[generateNum(0, emojis.length - 1)]);
-        axios.get("http://hayf-api.sagak.se:8080/getFeelings").then((response) => {
+        axios.get("https://hayf-api.sagak.se/getFeelings").then((response) => {
             setFeelings(response.data.reverse());
         });
     }, []);
 
     async function addFeeling(event: React.FormEvent) {
         event.preventDefault();
-        axios.post("http://hayf-api.sagak.se:8080/feeling", { feeling: formText });
+        axios.post("https://hayf-api.sagak.se/feeling", { feeling: formText });
         const feeling: Feeling = {
             feeling: formText,
             id: 3,
